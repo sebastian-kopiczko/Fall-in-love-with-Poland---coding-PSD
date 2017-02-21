@@ -21,6 +21,6 @@
         gulp.watch('app/*.html', browserSync.reload);
         gulp.watch('app/js/**/*.js', browserSync.reload);
     });
-    gulp.task('images', function () {
-        return gulp.src('app/images/**/*.+(png|jpg|svg)').pipe(imagemin()).pipe(gulp.dest('dist/images'))
-    });
+    //    gulp.task('images', function () {
+    //        return gulp.src('app/images/**/*.+(png|jpg|svg)').pipe(imagemin()).pipe(gulp.dest('dist/images'))
+    //    });
