@@ -169,6 +169,7 @@
             padding-top: 5rem;
             background: $mobile-background;
             transition: all .5s ease-in-out;
+            transition-delay: 0.3s;
             visibility: hidden;
             li {
                 margin: 2rem;
