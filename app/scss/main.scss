@@ -1,3 +1,6 @@
+//* {
+//    outline: 1px solid lime
+//}
 body {
     font-family: 'Lato', sans-serif;
 }
@@ -17,5 +20,11 @@ h1 {
 button {
     text-transform: uppercase;
     border: none;
+    border-radius: 1.4rem;
+    color: #000;
+    background-color: $page-yellow;
     cursor: pointer;
+    &:focus {
+        outline-color: #fff;
+    }
 }

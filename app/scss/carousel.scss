@@ -1,0 +1,132 @@
+.journey-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-top: -150px;
+    position: relative;
+    text-align: center;
+    @media only screen and (max-width: 1200px) {
+        max-width: 800px;
+    }
+    @media only screen and (max-width: 800px) {
+        display: none;
+    }
+    &:before {
+        content: "Popular places to discover";
+        color: #fff;
+        display: block;
+        font-weight: 300;
+        position: relative;
+        top: -25px;
+    }
+    ul {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: nowrap;
+        margin: 0;
+        padding: 0;
+        li {
+            list-style: none;
+            height: 250px;
+            min-width: 210px;
+            background: {
+                repeat: no-repeat;
+                position: center;
+                size: contain;
+            }
+            position: relative;
+            margin: 0px 10px;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            align-items: center;
+            &:nth-child(1) {
+                background-image: url('../images/wroclaw.jpg');
+            }
+            &:nth-child(2) {
+                background-image: url('../images/zakopane.jpg');
+            }
+            &:nth-child(3) {
+                background-image: url('../images/warszawa1.jpg');
+            }
+            &:nth-child(4) {
+                background-image: url('../images/sopot.jpg');
+            }
+            &:nth-child(5) {
+                background-image: url('../images/sandomierz.jpg');
+            }
+            @media only screen and (max-width: 1200px) {
+                &:nth-child(1),
+                &:nth-child(5) {
+                    display: none;
+                }
+            }
+            &:before {
+                content: '';
+                position: absolute;
+                height: 100%;
+                width: 100%;
+                top: 3px;
+                left: 0;
+                transition: all .25s ease-in-out;
+            }
+            span {
+                width: 100%;
+                text-align: center;
+                transition: all .25s ease-in-out;
+                background: rgba(0, 0, 0, 0.5);
+                //                text-shadow: -1px 0 rgba(0, 0, 0, 0.8), 0 1px rgba(0, 0, 0, 0.8), 1px 0 rgba(0, 0, 0, 0.8), 0 -1px rgba(0, 0, 0, 0.8);
+            }
+            .city-name {
+                color: #fff;
+                font-size: 1.5rem;
+                font-weight: 700;
+            }
+            .city-province {
+                color: $page-yellow;
+                font: {
+                    size: 1rem;
+                    weight: 300;
+                }
+            }
+            button {
+                opacity: 0;
+                height: 2rem;
+                padding: 5px 25px;
+                margin-bottom: 20px;
+                color: #fff;
+                background: #000;
+                border: none;
+                transition: all .25s ease-in-out;
+                font: {
+                    size: 0.8rem;
+                    weight: 700;
+                }
+                &:hover {
+                    background: $page-yellow;
+                    color: #000;
+                }
+            }
+            &:hover {
+                .city-name {
+                    font-size: 2.2rem;
+                }
+                span {
+                    transform: translateY(-55px);
+                    background: transparent;
+                }
+                &:before {
+                    background-color: rgba(0, 0, 0, 0.75);
+                    border: none;
+                }
+                button {
+                    opacity: 1;
+                    z-index: 2;
+                }
+            }
+        }
+    }
+}
