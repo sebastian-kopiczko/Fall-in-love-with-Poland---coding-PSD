@@ -10,43 +10,43 @@
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&amp;subset=latin-ext" rel="stylesheet"> </head>
 
 <body>
-    <section class="guide-sec">
-        <header>
-            <div class="logo"><img src="images/logo.png" alt="Company's logo"><span>Polind</span></div>
-            <button class="menu-btn" id="hamburger"> <span class="line"></span> <span class="line"></span> <span class="line"></span> </button>
-            <nav>
-                <ul id="mobile-menu">
-                    <li> <a href="#guide-sec">Guide</a></li>
-                    <li><a href="#journey-sec">Journey</a></li>
-                    <li><a href="#hotels-sec">Hotels</a></li>
-                    <li><a href="#travelers-sec">Travelers</a></li>
-                    <li class="search">
+    <section id="home" class="home">
+        <header class="header">
+            <div class="header__logo logo"> <img src="images/logo.png" alt="Company's logo"> <span class="logo__title">Polind</span> </div>
+            <button class="header__menu-btn" id="hamburger"> <span class="line"></span><span class="line"></span> <span class="line"></span> </button>
+            <nav class="header__nav nav">
+                <ul class="nav__menu" id="mobile-menu">
+                    <li class=nav__item> <a href="#home">Guide</a></li>
+                    <li class=nav__item><a href="#journey">Journey</a></li>
+                    <li class=nav__item><a href="#hotels-sec">Hotels</a></li>
+                    <li class=nav__item><a href="#travelers-sec">Travelers</a></li>
+                    <li class="nav__search-bar nav__item">
                         <input type="text"> </li>
                 </ul>
             </nav>
         </header>
-        <div class="guide-text">
-            <h1>Fall in love</h1>
-            <h1 class="text-orange">with Poland</h1> <span>Best way to find your perfect place in Poland</span>
-            <button class="guide-btn">search your place</button>
+        <div class="home__text text">
+            <h1 class="text__heading">Fall in love</h1>
+            <h1 class="text__heading text-orange">with Poland</h1> <span class="text-after">Best way to find your perfect place in Poland</span>
+            <button class="text__btn">search your place</button>
         </div>
     </section>
-    <section id="journey-sec">
-        <div class="journey-wrapper">
-            <ul>
-                <li class="journey-city"><span class="city-name">Wrocław</span> <span class="city-province">Dolnośląskie</span>
+    <section id="journey">
+        <div class="discover">
+            <ul class="discover__gallery gallery">
+                <li class="gallery__item"><span class="gallery__city-name">Wrocław</span> <span class="gallery__city-province">Dolnośląskie</span>
                     <button>view offers</button>
                 </li>
-                <li class="journey-city"><span class="city-name">Zakopane</span> <span class="city-province">Małopolskie</span>
+                <li class="gallery__item"><span class="gallery__city-name">Zakopane</span> <span class="gallery__city-province">Małopolskie</span>
                     <button>view offers</button>
                 </li>
-                <li class="journey-city"><span class="city-name">Warszawa</span> <span class="city-province">Mazowieckie</span>
+                <li class="gallery__item"><span class="gallery__city-name">Warszawa</span> <span class="gallery__city-province">Mazowieckie</span>
                     <button>view offers</button>
                 </li>
-                <li class="journey-city"><span class="city-name">Sopot</span> <span class="city-province">Pomorskie</span>
+                <li class="gallery__item"><span class="gallery__city-name">Sopot</span> <span class="gallery__city-province">Pomorskie</span>
                     <button>view offers</button>
                 </li>
-                <li class="journey-city"><span class="city-name">Sandomierz</span><span class="city-province">Świętokrzyskie</span>
+                <li class="gallery__item"><span class="gallery__city-name">Sandomierz</span><span class="gallery__city-province">Świętokrzyskie</span>
                     <button>view offers</button>
                 </li>
             </ul>
