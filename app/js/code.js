@@ -1,4 +1,19 @@
-document.addEventListener("DOMContentLoaded", function () {
+(function () {
+    //    var onresize = function (e) {
+    //        var width = e.target.outerWidth;
+    //        var imgSize = "";
+    //        if (width > 710 && width < 995) {
+    //            imgSize = "700x300"
+    //        }
+    //        else if (width > 709 && width < 450) {
+    //            imgSize = "500x250"
+    //        }
+    //        else {
+    //            imgSize = "350x350"
+    //        }
+    //        document.getElementById("responsiveImg").src = "http://placehold.it/" + imgSize;
+    //    }
+    //    window.addEventListener("resize", onresize);
     var menuBtn = document.getElementById('hamburger');
     var mobileMenu = document.getElementById('mobile-menu');
     menuBtn.addEventListener('click', function () {
@@ -17,4 +32,4 @@ document.addEventListener("DOMContentLoaded", function () {
             });
         }
     });
-});
+})();

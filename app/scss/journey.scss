@@ -79,24 +79,6 @@
                 transition: all .25s ease-in-out;
                 background: rgba(0, 0, 0, 0.5);
             }
-            button {
-                opacity: 0;
-                height: 2rem;
-                padding: 5px 25px;
-                margin-bottom: 20px;
-                color: #fff;
-                background: #000;
-                border: none;
-                transition: all .25s ease-in-out;
-                font: {
-                    size: 0.8rem;
-                    weight: 700;
-                }
-                &:hover {
-                    background: $page-yellow;
-                    color: #000;
-                }
-            }
             &:hover {
                 .city-name {
                     font-size: 2.2rem;
@@ -109,10 +91,38 @@
                     background-color: rgba(0, 0, 0, 0.75);
                     border: none;
                 }
-                button {
+                .button {
                     opacity: 1;
                     z-index: 2;
                 }
+            }
+        }
+        &__btn {
+            font: {
+                size: 0.8rem;
+                weight: 700;
+            }
+            text-transform: uppercase;
+            border-radius: 1.4rem;
+            color: #000;
+            background-color: $page-yellow;
+            cursor: pointer;
+            text-decoration: none;
+            opacity: 0;
+            height: 1.5rem;
+            line-height: 1.5rem;
+            padding: 5px 25px;
+            margin-bottom: 20px;
+            color: #fff;
+            background: #000;
+            border: none;
+            transition: all .25s ease-in-out;
+            &:focus {
+                outline-color: #fff;
+            }
+            &:hover {
+                background: $page-yellow;
+                color: #000;
             }
         }
         &__city-name {
