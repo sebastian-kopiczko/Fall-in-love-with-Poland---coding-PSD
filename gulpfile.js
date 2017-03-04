@@ -4,6 +4,12 @@
     var sourcemaps = require('gulp-sourcemaps');
     var browserSync = require('browser-sync').create();
     var imagemin = require('gulp-imagemin');
+    var cleanCSS = require('gulp-clean-css');
+    gulp.task('minify-css', function () {
+        return gulp.src('app/css/*.css').pipe(cleanCSS({
+            compatibility: 'ie8'
+        })).pipe(gulp.dest('dist'));
+    });
     gulp.task('sass', function () {
         return gulp.src('app/scss/styles.scss').pipe(sourcemaps.init()).pipe(sass().on('error', sass.logError)).pipe(sourcemaps.write()).pipe(autoprefixer()).pipe(gulp.dest('app/css')).pipe(browserSync.reload({
             stream: true
