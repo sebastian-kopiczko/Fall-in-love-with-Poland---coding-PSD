@@ -1,6 +1,6 @@
 .explore-city {
     max-width: 1200px;
-    height: 100vh;
+    min-height: 60vh;
     background: #fff;
     text-align: center;
     margin: 0 auto;
@@ -22,11 +22,19 @@
         }
     }
     &__btn {
-        padding: 10px 15px;
+        display: block;
+        text-decoration: none;
+        background: $page-yellow;
+        width: 130px;
+        height: 40px;
+        text-align: center;
+        border-radius: 25px;
+        line-height: 35px;
         font-weight: 700;
+        text-transform: uppercase;
         margin-top: 15px;
+        color: #000;
         transition: all 0.5s ease-in-out;
-        height: 2.5rem;
         &:hover {
             color: #fff;
             background: #000;
@@ -88,6 +96,8 @@
         &__city-image {
             &:before {
                 border: none;
+                width: 1px;
+                height: 1px;
             }
             height: 231px;
             border: 2px solid $page-yellow;
