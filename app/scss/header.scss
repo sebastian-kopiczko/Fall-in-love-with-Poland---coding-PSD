@@ -38,9 +38,11 @@
         z-index: 3;
         &:hover {
             cursor: pointer;
+            background: transparent;
         }
         &:focus {
             outline: 1px solid #eee;
+            background: transparent;
         }
         &.hide {
             transform: translateY(-100px);
