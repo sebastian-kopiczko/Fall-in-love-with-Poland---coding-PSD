@@ -2,7 +2,6 @@
     animateMenu();
     exploreCity();
     hideMenu();
-    setFooter();
     var cityName = document.getElementById("city-name");
 
     function exploreCity() {
@@ -89,11 +88,5 @@
             });
             b = a;
         };
-    }
-
-    function setFooter() {
-        var year = new Date().getFullYear();
-        var footer = document.getElementById("footer");
-        footer.textContent = "Copyright by Sebastian Kopiczko " + year;
     }
 })();

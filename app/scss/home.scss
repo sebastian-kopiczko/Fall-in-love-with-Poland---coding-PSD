@@ -1,0 +1,63 @@
+.home {
+    display: flex;
+    align-content: center;
+    color: #fff;
+    height: 100vh;
+    min-height: 450px;
+    position: relative;
+    background: {
+        image: url('../images/main-photo.jpg');
+        position: center;
+        repeat: no-repeat;
+        size: cover;
+    }
+    @media only screen and (max-width: 800px) {
+        height: 100vh;
+    }
+    &:before {
+        content: '';
+        display: block;
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        left: 0;
+        background: rgba(0, 0, 0, 0.6);
+    }
+
+    .text {
+        width: 350px;
+        margin: auto;
+        z-index: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        &__heading {
+            font-size: 3.5rem;
+        }
+        &-after {
+            color: $dark-grey;
+            margin: 1rem 0;
+            padding: 0px 1rem;
+            text-align: center;
+        }
+        &__btn {
+            margin-top: 2rem;
+            padding: 0 2rem;
+            letter-spacing: 0.25px;
+            height: 2.5rem;
+        }
+        @media only screen and (max-width: 350px) {
+            .text__btn {
+                transform: scale(0.8);
+            }
+            h1 {
+                font-size: 2.5rem;
+            }
+        }
+        @media only screen and (max-width: 650px) and (orientation: landscape) {
+            transform: scale(0.7);
+        }
+    }
+}

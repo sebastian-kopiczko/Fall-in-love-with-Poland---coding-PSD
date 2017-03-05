@@ -5,6 +5,9 @@
     text-align: center;
     margin: 0 auto;
     padding-top: 50px;
+    h3 {
+        font-size: 2rem;
+    }
     .wrapper {
         display: flex;
         flex-direction: row;
@@ -15,10 +18,10 @@
     &__article {
         text-align: left;
         max-width: 550px;
-        h2 {
+        h4 {
             color: $page-yellow;
             margin: 0 0 25px 0;
-            ;
+            font-size: 1.5rem;
         }
     }
     &__btn {
