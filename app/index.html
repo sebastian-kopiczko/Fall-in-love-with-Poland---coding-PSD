@@ -15,16 +15,35 @@
 
 <body>
     <header class="header">
-        <div class="header__logo logo"><img src="images/logo.png" alt=""> <span class="logo__title"><a href="#home" aria-label="Page logo" title="Home page" >Polind</a></span> </div>
-        <button class="header__menu-btn menu" id="hamburger" aria-expanded="false" aria-label="Menu" title="Open/close menu" tabindex="0"><span class="line"></span><span class="line"></span> <span class="line"></span> </button>
-        <nav class="header__nav nav">
-            <ul class="nav__menu" id="mobile-menu">
-                <li class="nav__item"> <a href="#home">Home</a></li>
-                <li class="nav__item"><a href="#journey">Popular places</a></li>
-                <li class="nav__item"><a href="#explore">Explore city</a></li>
-                <li class="nav__item"><a href="#enjoy">Sign up</a></li>
-            </ul>
-        </nav>
+        <div class="header__inner">
+            <div class="header__logo logo">
+                <img src="images/logo.png" alt="">
+                <span class="logo__title">
+                    <a href="#home" aria-label="Page logo" title="Home page">PolTrip</a>
+                </span>
+            </div>
+            <button class="header__menu-btn menu" id="hamburger" aria-expanded="false" aria-label="Menu" title="Open/close menu" tabindex="0">
+                <span class="line"></span>
+                <span class="line"></span>
+                <span class="line"></span>
+            </button>
+            <nav class="header__nav nav">
+                <ul class="nav__menu" id="mobile-menu">
+                    <li class="nav__item">
+                        <a href="#home">Home</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#journey">Popular places</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#explore">Explore city</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#enjoy">Sign up</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
     </header>
     <section id="home" class="home">
         <div class="home__text text">
@@ -38,17 +57,35 @@
         <div class="discover">
             <ul class="discover__gallery gallery">
                 <li class="gallery__item" data-city-name="Wrocław" tabindex="0">
-                    <a class="gallery__btn"></a><span class="gallery__city-name">Wrocław</span> <span class="gallery__city-province">Dolnośląskie</span></li>
+                    <a class="gallery__btn"></a>
+                    <span class="gallery__city-name">Wrocław</span>
+                    <span class="gallery__city-province">Dolnośląskie</span>
+                </li>
                 <li class="gallery__item" data-city-name="Zakopane " tabindex="0">
-                    <a class="gallery__btn"></a><span class="gallery__city-name">Zakopane</span> <span class="gallery__city-province ">Małopolskie</span> </li>
+                    <a class="gallery__btn"></a>
+                    <span class="gallery__city-name">Zakopane</span>
+                    <span class="gallery__city-province ">Małopolskie</span>
+                </li>
                 <li class="gallery__item" data-city-name="Kraków" tabindex="0">
-                    <a class="gallery__btn"></a><span class="gallery__city-name">Kraków</span> <span class="gallery__city-province">Małopolskie</span> </li>
+                    <a class="gallery__btn"></a>
+                    <span class="gallery__city-name">Kraków</span>
+                    <span class="gallery__city-province">Małopolskie</span>
+                </li>
                 <li class="gallery__item" data-city-name="Sandomierz " tabindex="0">
-                    <a class="gallery__btn"></a><span class="gallery__city-name">Sandomierz</span><span class="gallery__city-province">Świętokrzyskie</span> </li>
+                    <a class="gallery__btn"></a>
+                    <span class="gallery__city-name">Sandomierz</span>
+                    <span class="gallery__city-province">Świętokrzyskie</span>
+                </li>
                 <li class="gallery__item" data-city-name="Warszawa" tabindex="0">
-                    <a class="gallery__btn"></a><span class="gallery__city-name">Warszawa</span> <span class="gallery__city-province">Mazowieckie</span> </li>
+                    <a class="gallery__btn"></a>
+                    <span class="gallery__city-name">Warszawa</span>
+                    <span class="gallery__city-province">Mazowieckie</span>
+                </li>
                 <li class="gallery__item" data-city-name="Sopot" tabindex="0">
-                    <a class="gallery__btn"></a><span class="gallery__city-name">Sopot</span> <span class="gallery__city-province">Pomorskie</span> </li>
+                    <a class="gallery__btn"></a>
+                    <span class="gallery__city-name">Sopot</span>
+                    <span class="gallery__city-province">Pomorskie</span>
+                </li>
             </ul>
         </div>
     </section>
@@ -58,9 +95,21 @@
             <div class="wrapper">
                 <article class="explore-city__article article">
                     <h4 id="city-name">Wrocław</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque et egestas neque. Vestibulum gravida consequat turpis et semper. In hac habitasse platea dictumst. Suspendisse in magna ut nunc venenatis tristique. Integer in dui porta, interdum ipsum at, pharetra odio. Aliquam rhoncus mi sit amet libero bibendum imperdiet. Mauris sit amet pretium leo. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
-                    <p>Mauris blandit lectus eget libero feugiat, quis venenatis lorem malesuada. Morbi nec accumsan neque. Nam a fermentum lorem, sit amet feugiat augue. Sed sed arcu sit amet diam suscipit volutpat. Phasellus iaculis bibendum mollis. Quisque aliquam arcu in leo lacinia hendrerit. Aenean consequat porta ex. Fusce nec dolor fermentum purus luctus pulvinar. Etiam dapibus volutpat egestas. Sed eu nisl tellus. Ut vel sapien dictum, scelerisque sem ac, rhoncus massa.</p> <a class="explore-city__btn" id="trip-btn" href="https://pl.tripadvisor.com/Tourism-g274812">check offers</a></article>
-                <div class="explore-city__city-image city-image "><img id="responsiveImg" src="http://placehold.it/350x350" alt="Responsive image of selected city - so far only responsive image placeholder"></div>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque et egestas neque. Vestibulum gravida
+                        consequat turpis et semper. In hac habitasse platea dictumst. Suspendisse in magna ut nunc venenatis
+                        tristique. Integer in dui porta, interdum ipsum at, pharetra odio. Aliquam rhoncus mi sit amet libero
+                        bibendum imperdiet. Mauris sit amet pretium leo. Class aptent taciti sociosqu ad litora torquent
+                        per conubia nostra, per inceptos himenaeos.</p>
+                    <p>Mauris blandit lectus eget libero feugiat, quis venenatis lorem malesuada. Morbi nec accumsan neque.
+                        Nam a fermentum lorem, sit amet feugiat augue. Sed sed arcu sit amet diam suscipit volutpat. Phasellus
+                        iaculis bibendum mollis. Quisque aliquam arcu in leo lacinia hendrerit. Aenean consequat porta ex.
+                        Fusce nec dolor fermentum purus luctus pulvinar. Etiam dapibus volutpat egestas. Sed eu nisl tellus.
+                        Ut vel sapien dictum, scelerisque sem ac, rhoncus massa.</p>
+                    <a class="explore-city__btn" id="trip-btn" href="https://pl.tripadvisor.com/Tourism-g274812">check offers</a>
+                </article>
+                <div class="explore-city__city-image city-image ">
+                    <img id="responsiveImg" src="http://placehold.it/350x350" alt="Responsive image of selected city - so far only responsive image placeholder">
+                </div>
             </div>
         </div>
     </section>
@@ -68,7 +117,9 @@
         <div class="sign-up">
             <h3 class="sign-up__heading">Enjoy your journey</h3>
             <button class="sign-up__btn">sign up</button>
-            <div class="sign-up__text-small">You can also sign up on our <a href=" " class="text-yellow-underscored">newsletter</a></div>
+            <div class="sign-up__text-small">You can also sign up on our
+                <a href=" " class="text-yellow-underscored">newsletter</a>
+            </div>
         </div>
     </section>
     <footer id="footer">Copyright &copy; by Sebastian Kopiczko 2017</footer>

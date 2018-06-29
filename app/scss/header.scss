@@ -1,38 +1,42 @@
 .header {
-    display: flex;
-    align-items: flex-end;
-    justify-content: space-between;
-    position: absolute;
+    position: fixed;
     background: transparent;
     height: 50px;
-    margin: auto;
     z-index: 1;
     width: 100%;
     display: flex;
-    justify-content: space-between;
-    &__logo {
+    &__inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: auto;
+        width: 100%;
+        padding: 0.5em 2em;
+    }
+    &__logo,
+    .logo {
         cursor: pointer;
-        font-size: 1.7rem;
-        margin: 0 0 -20px 20px;
-        height: 62px;
+        font-size: 1.3rem;
         display: flex;
         flex-direction: row;
         justify-content: center;
         align-items: center;
-        .logo__title {
-            height: 2rem;
+        &__title {
             font-weight: 700;
-            padding-left: 1rem;
+            padding-left: 1em;
             a {
                 text-decoration: none;
                 color: #fff;
             }
         }
+        img {
+            height: 2em;
+            @media (min-width: 500px) {
+                height: 2.5em;
+            }
+        }
     }
     &__menu-btn {
-        position: fixed;
-        top: 5px;
-        right: 5px;
         background: transparent;
         outline: transparent;
         z-index: 3;
@@ -48,11 +52,11 @@
             transform: translateY(-100px);
         }
         .line {
-            width: 50px;
-            height: 5px;
+            width: 35px;
+            height: 3px;
             background-color: $page-orange;
             display: block;
-            margin: 8px auto;
+            margin: 6px auto;
             transition: all 0.3s ease-in-out;
             &:nth-child(2) {
                 transition-delay: 0.3s;
@@ -90,7 +94,7 @@
     }
     .nav {
         position: relative;
-        display: flex;
+        display: none;
         justify-content: flex-end;
         &__menu {
             margin: 0;
@@ -145,8 +149,7 @@
                 transition: width .35s ease-in-out;
                 background: {
                     image: url('../images/magnifying-glass.svg');
-                    color: transparent;
-                    //                        rgba(255, 255, 255, 0.5)
+                    color: transparent; //                        rgba(255, 255, 255, 0.5)
                     repeat: no-repeat;
                     position: right;
                 }

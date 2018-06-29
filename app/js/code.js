@@ -15,24 +15,24 @@
         var tripBtn = document.getElementById("trip-btn");
         var cityCode;
         switch (cityName) {
-        case "Wrocław":
-            cityCode = "g274812";
-            break;
-        case "Zakopane":
-            cityCode = "g274793";
-            break;
-        case "Kraków":
-            cityCode = "g274772";
-            break;
-        case "Sandomierz":
-            cityCode = "g277818";
-            break;
-        case "Warszawa":
-            cityCode = "g274856";
-            break;
-        case "Sopot":
-            cityCode = "g274735";
-            break;
+            case "Wrocław":
+                cityCode = "g274812";
+                break;
+            case "Zakopane":
+                cityCode = "g274793";
+                break;
+            case "Kraków":
+                cityCode = "g274772";
+                break;
+            case "Sandomierz":
+                cityCode = "g277818";
+                break;
+            case "Warszawa":
+                cityCode = "g274856";
+                break;
+            case "Sopot":
+                cityCode = "g274735";
+                break;
         }
         var tripLink = "https://pl.tripadvisor.com/Tourism-" + cityCode;
         tripBtn.setAttribute("href", tripLink);
@@ -51,30 +51,29 @@
             if (this.classList.contains("is-active")) {
                 this.classList.remove("is-active");
                 Object.assign(mobileMenu.style, {
-                    visibility: "hidden"
-                    , opacity: 0
+                    visibility: "hidden",
+                    opacity: 0
                 });
-            }
-            else {
+            } else {
                 this.classList.add("is-active");
                 Object.assign(mobileMenu.style, {
-                    visibility: "visible"
-                    , opacity: 1
+                    visibility: "visible",
+                    opacity: 1
                 })
             };
         });
     }
 
     function hideMenu() {
-        var ishiddenclass = 'hide'
-            , b = (window.pageYOffset || document.documentElement.scrollTop) - (document.documentElement.clientTop || 0);
+        var ishiddenclass = 'hide',
+            b = (window.pageYOffset || document.documentElement.scrollTop) - (document.documentElement.clientTop || 0);
         var ms = 0;
         document.ontouchmove = function () {
             $('body').append(document.documentElement.scrollTop);
         };
         document.onscroll = function () {
-            var t = (window.pageYOffset || document.documentElement.scrollTop) - (document.documentElement.clientTop || 0)
-                , a = t;
+            var t = (window.pageYOffset || document.documentElement.scrollTop) - (document.documentElement.clientTop || 0),
+                a = t;
             var elements = document.querySelectorAll('.menu');
             elements.forEach(function (el) {
                 if (a < b) {

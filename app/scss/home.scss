@@ -24,7 +24,6 @@
         left: 0;
         background: rgba(0, 0, 0, 0.6);
     }
-
     .text {
         width: 350px;
         margin: auto;
@@ -34,10 +33,10 @@
         align-items: center;
         justify-content: center;
         &__heading {
-            font-size: 3.5rem;
+            font-size: 2.8rem;
         }
         &-after {
-            color: $dark-grey;
+            color: #ddd;
             margin: 1rem 0;
             padding: 0px 1rem;
             text-align: center;
