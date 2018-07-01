@@ -9,15 +9,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="author" href="https://www.linkedin.com/in/sebastian-kopiczko/">
     <link rel="icon" type="image/png" href="images/logo32.png" sizes="32x32">
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="src/css/normalize.css">
+    <link rel="stylesheet" href="src/css/styles.css">
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&amp;subset=latin-ext" rel="stylesheet"> </head>
 
 <body>
     <header class="header">
         <div class="header__inner">
             <div class="header__logo logo">
-                <img src="images/logo.png" alt="">
+                <img src="src/images/logo.png" alt="">
                 <span class="logo__title">
                     <a href="#home" aria-label="Page logo" title="Home page">PolTrip</a>
                 </span>
@@ -27,7 +27,7 @@
                 <span class="line"></span>
                 <span class="line"></span>
             </button>
-            <nav class="header__nav nav">
+            <nav id="nav" class="header__nav nav">
                 <ul class="nav__menu" id="mobile-menu">
                     <li class="nav__item">
                         <a href="#home">Home</a>
@@ -61,7 +61,7 @@
                     <span class="gallery__city-name">Wrocław</span>
                     <span class="gallery__city-province">Dolnośląskie</span>
                 </li>
-                <li class="gallery__item" data-city-name="Zakopane " tabindex="0">
+                <li class="gallery__item" data-city-name="Zakopane" tabindex="0">
                     <a class="gallery__btn"></a>
                     <span class="gallery__city-name">Zakopane</span>
                     <span class="gallery__city-province ">Małopolskie</span>
@@ -71,7 +71,7 @@
                     <span class="gallery__city-name">Kraków</span>
                     <span class="gallery__city-province">Małopolskie</span>
                 </li>
-                <li class="gallery__item" data-city-name="Sandomierz " tabindex="0">
+                <li class="gallery__item" data-city-name="Sandomierz" tabindex="0">
                     <a class="gallery__btn"></a>
                     <span class="gallery__city-name">Sandomierz</span>
                     <span class="gallery__city-province">Świętokrzyskie</span>
@@ -105,10 +105,12 @@
                         iaculis bibendum mollis. Quisque aliquam arcu in leo lacinia hendrerit. Aenean consequat porta ex.
                         Fusce nec dolor fermentum purus luctus pulvinar. Etiam dapibus volutpat egestas. Sed eu nisl tellus.
                         Ut vel sapien dictum, scelerisque sem ac, rhoncus massa.</p>
-                    <a class="explore-city__btn" id="trip-btn" href="https://pl.tripadvisor.com/Tourism-g274812">check offers</a>
+                    <a class="explore-city__btn" id="trip-btn" href="https://pl.tripadvisor.com/Tourism-g274812">
+                        <span>check offers</span>
+                    </a>
                 </article>
                 <div class="explore-city__city-image city-image ">
-                    <img id="responsiveImg" src="http://placehold.it/350x350" alt="Responsive image of selected city - so far only responsive image placeholder">
+                    <img id="responsiveImg" src="http://placehold.it/350x350" alt="Responsive placeholder image of selected city">
                 </div>
             </div>
         </div>
@@ -118,12 +120,12 @@
             <h3 class="sign-up__heading">Enjoy your journey</h3>
             <button class="sign-up__btn">sign up</button>
             <div class="sign-up__text-small">You can also sign up on our
-                <a href=" " class="text-yellow-underscored">newsletter</a>
+                <a href="/" class="text-yellow-underscored">newsletter</a>
             </div>
         </div>
     </section>
-    <footer id="footer">Copyright &copy; by Sebastian Kopiczko 2017</footer>
-    <script src="js/code.js "></script>
+    <footer id="footer">Sebastian Kopiczko &copy; 2018</footer>
+    <script src="src/js/code.js "></script>
 </body>
 
 </html>

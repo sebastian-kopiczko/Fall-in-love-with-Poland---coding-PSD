@@ -1,7 +1,6 @@
 (function () {
     animateMenu();
     exploreCity();
-    hideMenu();
     var cityName = document.getElementById("city-name");
 
     function exploreCity() {
@@ -12,8 +11,7 @@
     }
 
     function setCityCode(cityName) {
-        var tripBtn = document.getElementById("trip-btn");
-        var cityCode;
+        var cityCode = "";
         switch (cityName) {
             case "Wrocław":
                 cityCode = "g274812";
@@ -35,6 +33,8 @@
                 break;
         }
         var tripLink = "https://pl.tripadvisor.com/Tourism-" + cityCode;
+        console.log(tripLink);
+        var tripBtn = document.getElementById("trip-btn");
         tripBtn.setAttribute("href", tripLink);
     }
 
@@ -47,6 +47,7 @@
     function animateMenu() {
         var menuBtn = document.getElementById("hamburger");
         var mobileMenu = document.getElementById("mobile-menu");
+        var nav = document.getElementById("nav");
         menuBtn.addEventListener("click", function () {
             if (this.classList.contains("is-active")) {
                 this.classList.remove("is-active");
@@ -54,38 +55,19 @@
                     visibility: "hidden",
                     opacity: 0
                 });
+                Object.assign(nav.style, {
+                    display: "none"
+                });
             } else {
                 this.classList.add("is-active");
                 Object.assign(mobileMenu.style, {
                     visibility: "visible",
                     opacity: 1
+                });
+                Object.assign(nav.style, {
+                    display: "flex"
                 })
             };
         });
-    }
-
-    function hideMenu() {
-        var ishiddenclass = 'hide',
-            b = (window.pageYOffset || document.documentElement.scrollTop) - (document.documentElement.clientTop || 0);
-        var ms = 0;
-        document.ontouchmove = function () {
-            $('body').append(document.documentElement.scrollTop);
-        };
-        document.onscroll = function () {
-            var t = (window.pageYOffset || document.documentElement.scrollTop) - (document.documentElement.clientTop || 0),
-                a = t;
-            var elements = document.querySelectorAll('.menu');
-            elements.forEach(function (el) {
-                if (a < b) {
-                    if (el.classList) el.classList.remove(ishiddenclass);
-                    else el.className = el.className.replace(new RegExp('(^|\\b)' + ishiddenclass.split(' ').join('|') + '(\\b|$)', 'gi'), ' ');
-                }
-                if (a > b) {
-                    if (el.classList) el.classList.add(ishiddenclass);
-                    else el.className += ' ' + ishiddenclass;
-                }
-            });
-            b = a;
-        };
     }
 })();
